@@ -83,9 +83,10 @@ backend/
 ## 🛠️ Tech Stack
 ### Frontend 
 - **Framework**: Next.js with TypeScript
-- **Styling**: Tailwind CSS
-- **State Management**: React Context/Redux Toolkit
+- **Styling**: Tailwind CSS , Radix UI
+- **State Management**: React Context/hook
 - **UI Components**: Modern responsive design
+- **Mobile Rsponive**:fully responsive
 
 
 
