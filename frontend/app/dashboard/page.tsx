@@ -77,7 +77,7 @@ export default function Dashboard() {
   
     fetchTasks()
   }, [])
-  console.log("task",tasks)
+  // console.log("task",tasks)
   const today = new Date().toISOString().split("T")[0]
 
   console.log("today",today)

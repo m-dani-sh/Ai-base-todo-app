@@ -18,11 +18,15 @@ class TaskSerializer(serializers.ModelSerializer):
     # Category as name string
     category = serializers.CharField()
 
+    # ✅ Add created_at field for frontend display
+    created_at = serializers.DateTimeField(read_only=True)
+
     class Meta:
         model = Task
         fields = [
             'id', 'title', 'description', 'tags', 'tag_names',
-            'category', 'deadline', 'priority', 'status'
+            'category', 'deadline', 'priority', 'status',
+            'created_at', 
         ]
 
     def get_tag_names(self, obj):
@@ -60,7 +64,6 @@ class TaskSerializer(serializers.ModelSerializer):
 
         instance.save()
         return instance
-
 
 class ContextEntrySerializer(serializers.ModelSerializer):
     # Accept list of strings on create

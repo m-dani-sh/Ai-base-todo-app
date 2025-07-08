@@ -67,9 +67,7 @@ backend/
 │   │   ├── views.py         # Context views
 │   │   └── ...              # Other context files
 │   ├── ai_integration/      # AI service module
-│   │   ├── __init__.py
-│   │   ├── services.py      # AI-related logic
-│   │   └── ...              # Other AI files
+│   │              
 │   ├── migrations/          # Database migrations
 │   ├── models.py            # Task models
 │   ├── serializers.py       # API serializers
@@ -94,14 +92,9 @@ backend/
 ### Backend
 - **Framework**: Django 4.2.7 + Django REST Framework 3.14.0
 - **Database**: SQLite (development) / PostgreSQL (production)
-- **AI Integration**: OpenAI API, Anthropic Claude, Google Gemini, or LM Studio
+- **AI Integration**: Google Gemini 
 - **Authentication**: Django Session Authentication
 - **API Documentation**: DRF built-in docs
-
-
-### AI Integration Options
-- **Option 1**: External APIs (OpenAI, Anthropic Claude, Google Gemini)
-- **Option 2**: Local LLM via LM Studio (recommended for privacy)
 
 ## 🚀 Quick Start
 ### Frontend Setup 
@@ -121,8 +114,9 @@ Frontend available at: `http://localhost:3000`
 1. **Clone and navigate to backend**:
    ```bash
    cd backend 
-  then 
-    cd  smart_todo
+   
+   cd smart_todo
+
    ```
 
 2. **Install dependencies**:
@@ -134,13 +128,31 @@ Frontend available at: `http://localhost:3000`
    ```bash
    python manage.py migrate
    ```
+4. **.env file Add api key**:
+<br>
 
-4. **Start development server**:
+ ```bash
+
+GEMINI_API_KEY = your actual key 
+ ```
+
+5. **Start development server**:
    ```bash
    python manage.py runserver
    ```
 
 The API will be available at `http://localhost:8000/`
+
+## UI Screenshots
+
+### Dashboard
+![Dashboard UI](https://github.com/m-dani-sh/Ai-base-todo-app/frontend/images/dashboard.png)
+
+### Task Page
+![Task UI](https://github.com/m-dani-sh/Ai-base-todo-app/frontend/images/addtask.png)
+
+### Context Page
+![Task UI](https://github.com/m-dani-sh/Ai-base-todo-app/frontend/images/context.png)
 
 
 ## 🗄️ Database Schema
@@ -161,17 +173,6 @@ The API will be available at `http://localhost:8000/`
 - **UserAIPreferences**: User AI settings and preferences
 - **TaskAIAnalysis**: AI analysis results for tasks
 
-## 🤖 AI Integration
-
-### Supported Providers
-
-1. **Google Gemini** - Smart categorization
-
-### AI Features Implementation
-- **Context Processing**: Analyze daily context to understand user's schedule
-- **Task Prioritization**: Generate priority scores based on context analysis
-- **Task Enhancement**: Provide enhanced task descriptions with relevant context
-- **Smart Categorization**: Automatically recommend task categories and tags
 
 
 
