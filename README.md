@@ -146,13 +146,13 @@ The API will be available at `http://localhost:8000/`
 ## UI Screenshots
 
 ### Dashboard
-![Dashboard UI](https://github.com/m-dani-sh/Ai-base-todo-app/frontend/images/dashboard.png)
+![Dashboard UI](https://github.com/m-dani-sh/Ai-base-todo-app/tree/main/frontend/images/dashboard.png)
 
 ### Task Page
-![Task UI](https://github.com/m-dani-sh/Ai-base-todo-app/frontend/images/addtask.png)
+![Task UI](https://github.com/m-dani-sh/Ai-base-todo-app/tree/main/frontend/images/addtask.png)
 
 ### Context Page
-![Task UI](https://github.com/m-dani-sh/Ai-base-todo-app/frontend/images/context.png)
+![Task UI](https://github.com/m-dani-sh/Ai-base-todo-app/tree/main/frontend/images/context.png)
 
 
 ## 🗄️ Database Schema
