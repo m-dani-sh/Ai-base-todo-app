@@ -120,24 +120,18 @@ Frontend available at: `http://localhost:3000`
 
    ```
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements-simple.txt
-   ```
 
-3. **Run migrations**:
-   ```bash
-   python manage.py migrate
-   ```
-4. **.env file Add api key**:
+2. **.env file Add api key**:
 <br>
 
  ```bash
 
 GEMINI_API_KEY = your actual key 
+
+DATABASE_URL = yor db uri
  ```
 
-5. **Start development server**:
+3. **Start development server**:
    ```bash
    python manage.py runserver
    ```

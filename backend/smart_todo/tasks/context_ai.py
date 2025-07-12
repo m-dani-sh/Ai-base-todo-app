@@ -3,6 +3,9 @@ import os
 import json
 from google.generativeai import GenerativeModel, configure
 from google.api_core.exceptions import ResourceExhausted
+from dotenv import load_dotenv
+load_dotenv() # This line loads the variables from .env
+
 
 # ✅ Configure Gemini with your API key (from environment variable for security)
 configure(api_key=os.getenv("GEMINI_API_KEY"))

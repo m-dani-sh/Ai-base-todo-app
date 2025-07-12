@@ -15,6 +15,8 @@ from decouple import config
 import dj_database_url
 import dotenv
 import os
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -93,10 +95,12 @@ WSGI_APPLICATION = 'smart_todo.wsgi.application'
 # }
 
 
-DATABASE_URL ='postgresql://postgres.podkkjodcroihxhjczyw:nhipta@123@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres'
-
 DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600, ssl_require=True)
+    'default': dj_database_url.parse(
+        os.getenv('DATABASE_URL'), # Get the DATABASE_URL from environment variables
+        conn_max_age=600,          # Optional: Reconnect after 600 seconds (10 minutes)
+        ssl_require=True           # Important for Supabase and most production databases
+    )
 }
 # Allow requests from your frontend
 CORS_ALLOWED_ORIGINS = [
